@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><3<3<3></title>
+</head>
+
+<style>
+    *{
+        padding:0;
+        margin:0;
+        font-family: sans-serif;
+    }
+    .container{
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #first{
+        animation-name: hiCrush;
+        animation-duration: 4s;
+        font-size: 1.5em;
+        animation-timing-function: ease-in-out;
+        color:white;
+    }
+    #second{
+        color:white;
+        display:none;
+
+        animation-name: secondText;
+        animation-duration: 4s;
+        font-size: .5em;
+        animation-timing-function: ease-in-out;
+    }
+    #third{
+        color:white;
+        display:none;
+
+        animation-name: thirdText;
+        animation-duration: 4s;
+        font-size: .5em;
+        animation-timing-function: ease-in-out;
+    }
+
+    #her{
+        display:none;
+        width: 300px;
+        height:300px;
+
+        border-radius: 20px;
+        border:1px solid #FF5BAE;
+        animation-name: picture;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+    }
+    #hi{
+        color:#FF5BAE;
+        font-size: .5em;
+        animation-name: sayHELLO;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+    }#hihi{
+        display: none;
+        color:#FF5BAE;
+        font-size: .5em;
+        animation-name: sayHELLO;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+    }#message{
+        display:none;
+        /* border:1px solid black; */
+        width: 80%;
+        word-break: keep-all;
+        text-align: center;
+        margin-top:10px;
+    }
+    @keyframes hiCrush{
+        0% {
+            color:black;
+            font-size: .5em;
+            transform: rotate(0deg);
+        }
+        25%{
+            font-size:  1.5em;
+            transform: rotate(360deg);
+            
+        }100%{
+            color:white;
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes secondText{
+        0% {
+            color:white;
+        }50%{
+            color:black;
+        }100% {
+            color:white;
+        }
+    }
+    @keyframes thirdText{
+        0% {
+            color:white;
+        }50%{
+            color:black;
+        }100% {
+            color:white;
+        }
+    }
+    @keyframes picture{
+        0% {
+            opacity: 0;
+        }100%{
+            opacity: 1;
+        }
+    }
+    @keyframes sayHELLO {
+        0%{
+            color:white;
+        }100%{
+            color: #FF5BAE;
+        }
+    }
+</style>
+
+<script>
+    let i = 0;
+    setInterval(function(){
+        console.log(i);
+        if(i==2){
+           var text = document.getElementById("first");
+           text.remove();
+           document.getElementById("second").style.display = "block";
+        }else if(i==5){
+            var text = document.getElementById("second");
+            text.remove();
+            document.getElementById("third").style.display = "block";
+        }else if(i==8){
+            var text = document.getElementById("third");
+            text.remove();
+            document.getElementById("her").style.display = "block";
+        }else if(i==10){
+            document.getElementById("message").style.display = "block";
+        }else if(i==12){
+            document.getElementById("hihi").style.display = "block";
+        }
+        i++;
+    },1500);
+</script>
+<body>
+    <div class="container">
+        <p id="first">HI CRUSHIE! <3 </p>
+        <p id="second">WHY ARE YOU SO CUTE TODAY?!?!<3 </p>
+        <p id="third">ANYWAY, I HAVE SOMETHING TO SHOW YOU <3 </p>
+        <img id="her" src="cutie.jpg">
+        <div id="message">
+            <p id="hi">SAY HELLO TO MY CUTE GIRL VERSION OF ME <3 </p>
+            <br>
+            <p id="hihi">HINDI NA SYA TORPE AYIEEE xDDDD</p>
+        </div>
+    </div>
+</body>
+</html>
